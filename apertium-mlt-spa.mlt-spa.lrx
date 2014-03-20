@@ -1,0 +1,5 @@
+<rules>
+  <rule> <!--do nothing-->
+    <match lemma="u"><select lemma="y"/></match>
+  </rule>
+</rules>

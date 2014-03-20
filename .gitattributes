@@ -6,9 +6,11 @@
 /NEWS -text
 /README -text
 /apertium-mlt-spa.mlt-spa.dix -text
+/apertium-mlt-spa.mlt-spa.lrx -text
 /apertium-mlt-spa.mlt-spa.t1x -text
 /apertium-mlt-spa.mlt-spa.t2x -text
 /apertium-mlt-spa.mlt-spa.t3x -text
+/apertium-mlt-spa.spa-mlt.lrx -text
 /autogen.sh -text
 /configure.ac -text
 texts/cuento.mlt.txt -text
