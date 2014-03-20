@@ -1,0 +1,11 @@
+<dictionary>
+  <alphabet/>
+  <sdefs>
+    <sdef n="cnjcoo"      c="Co-ordinating conjunction"/>
+  </sdefs>
+  <section id="main" type="standard">
+    <!-- SECTION: Conjunctions -->
+    <e><p><l>u<s n="cnjcoo"/></l><r>y<s n="cnjcoo"/></r></p></e>
+
+  </section>
+</dictionary>
