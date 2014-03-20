@@ -3,7 +3,7 @@
   <sdefs>
     <sdef n="n"           c="Noun"/>
     <sdef n="cnjcoo"      c="Co-ordinating conjunction"/>
-
+	<sdef n="vbser" 	c="Verb 'to be'"/>
     <sdef n="m"           c="Masculine"/>
 
     <sdef n="sent"        c="Sentence marker"/>
@@ -14,9 +14,13 @@
 
     <!-- SECTION: Nouns -->
     <e><p><l>ġnien<s n="n"/><s n="m"/></l><r>jardín<s n="n"/><s n="m"/></r></p></e>
+    <e><p><l>Ġakbu<s n="np"/></l><r>Jaime<s n="np"/></r></p></e>
+    <e><p><l>Marija<s n="np"/></l><r>María<s n="np"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
     <e><re>[.\?;:!"…]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
 
+
+	<e><p><l>qegħdin<s n="vbser"/></l><r>estar<s n="vbser"/></r></p></e>
   </section>
 </dictionary>
