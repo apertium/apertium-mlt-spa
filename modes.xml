@@ -16,16 +16,16 @@
       </program>
       <program name="apertium-pretransfer"/>
       <program name="apertium-transfer">
-        <file name="apertium-spa-mlt.mlt-spa.t1x"/>
+        <file name="apertium-mlt-spa.mlt-spa.t1x"/>
         <file name="mlt-spa.t1x.bin"/>
         <file name="mlt-spa.autobil.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-spa-mlt.mlt-spa.t2x"/>
+        <file name="apertium-mlt-spa.mlt-spa.t2x"/>
         <file name="mlt-spa.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-spa-mlt.mlt-spa.t3x"/>
+        <file name="apertium-mlt-spa.mlt-spa.t3x"/>
         <file name="mlt-spa.t3x.bin"/>
       </program>
       <program name="lt-proc $1">
