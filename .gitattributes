@@ -13,5 +13,6 @@
 /apertium-mlt-spa.spa-mlt.lrx -text
 /autogen.sh -text
 /configure.ac -text
+/modes.xml -text svneol=unset#application/xml
 texts/cuento.mlt.txt -text
 texts/cuento.spa.txt -text
