@@ -1,6 +1,3 @@
-
-
-
 <dictionary>
   <alphabet/>
   <sdefs>
@@ -10,7 +7,11 @@
     <sdef n="cnjcoo"      c="Co-ordinating conjunction"/>
     <sdef n="vbser"     c="Verb 'to be'"/>
     <sdef n="vblex" 	c="Verb"/> 
-    <sdef n="ant"         c="Anthroponym"/>
+    <sdef n="tn"/>
+    <sdef n="sint"/>
+    <sdef n="qnt"/>
+    <sdef n="sp"/>
+    <sdef n="GD"/>
     <sdef n="f"           c="Feminine"/>
     <sdef n="m"           c="Masculine"/>
     <sdef n="mf" 	c="Masculine / feminine"/> 
@@ -45,8 +46,8 @@
     <e><p><l>il-qattus<s n="n"/></l><r>el<b/>gato<s n="n"/></r></p></e>
     <e><p><l>ommhom<s n="n"/></l><r>madre<s n="n"/><s n="f"/></r></p></e>
     <e><p><l>siġra<s n="n"/></l><r>árbol<s n="n"/><s n="m"/></r></p></e>
-    <e><p><l>idejha<s n="n"/></l><r>manos<s n="n"/><s n="pl"></r></p></e>
-    <e><p><l>għajnejha<s n="n"/></l><r>manos<s n="n"/><s n="pl"></r></p></e>
+    <e><p><l>idejha<s n="n"/></l><r>manos<s n="n"/><s n="pl"/></r></p></e>
+    <e><p><l>għajnejha<s n="n"/></l><r>manos<s n="n"/><s n="pl"/></r></p></e>
     <e><p><l>is-siġra<s n="n"/></l><r>el<b/>árbol<s n="n"/></r></p></e>
     <e><p><l>id-dar<s n="n"/></l><r>la<b/>casa<s n="n"/><s n="f"/></r></p></e>
 
@@ -106,9 +107,8 @@
     <e><p><l>ħdejn<s n="pr"/></l><r>cerca<s n="pr"/></r></p></e>
 
 	<!-- SECTION: Numbers -->
-    <e><p><l>sitt</l><r>seis</r></p><par n="three__num"/></e>
-    <e><p><l>ħames</l><r>cinco</r></p><par n="three__num"/></e>
-    ħames
+    <e><p><l>sitt</l><r>seis</r></p></e>
+    <e><p><l>ħames</l><r>cinco</r></p></e>
 
 	<!-- SECTION: Pronouns -->
 	<e><p><l>xejn<s n="prn"/></l><r>nada<s n="prn"/></r></p></e>

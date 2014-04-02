@@ -1,3 +1,9 @@
+###############################################################################
+## Makefile for Maltese--Spanish
+###############################################################################
+
+SUBDIRS=$(AP_SUBDIRS)
+
 VERSION=0.1.0
 LANG1=mlt
 LANG2=spa
@@ -6,9 +12,11 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-     # $(PREFIX1).autopgen.bin
+#	$(PREFIX1).autopgen.bin
 
-TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autogen.bin \
+TARGETS_COMMON = \
+     $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin \
+     $(PREFIX1).autogen.bin \
      $(PREFIX2).automorf.bin $(PREFIX2).autobil.bin \
      $(PREFIX2).autogen.bin $(PREFIX2).autopgen.bin \
      $(PREFIX1).autolex.bin $(PREFIX1).rlx.bin \
@@ -18,40 +26,39 @@ TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autog
 
 #     $(PREFIX2).t1x.bin $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin 
 
-$(PREFIX1).automorf.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).dix $(AP_SRC1)/apertium-$(LANG1).$(LANG1).acx
-	apertium-validate-acx $(AP_SRC1)/apertium-$(LANG1).$(LANG1).acx
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@ $(AP_SRC1)/apertium-$(LANG1).$(LANG1).acx
+
+# This include defines goals for install-modes, .deps/.d and .mode files:
+@ap_include@
+
+###############################################################################
+## Transducers, disambiguation rules, transfer
+###############################################################################
+
+$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.bin $(PREFIX1).autobil.bin
+	lt-trim $^ $@
 
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $(BASENAME).$(PREFIX1).dix $@
 
-$(PREFIX1).autogen.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).dix
-	apertium-validate-dictionary $<
-	lt-comp rl $< $@
+$(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
+	cp $< $@
 
-$(PREFIX1).autopgen.bin: $(AP_SRC2)/apertium-$(LANG2).post-$(LANG2).dix
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@
 
-$(PREFIX2).automorf.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).dix $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
-	apertium-validate-acx $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@ $(AP_SRC2)/apertium-$(LANG2).$(LANG2).acx
+$(PREFIX2).automorf.bin: $(AP_LIB2)/$(LANG2).automorf.bin $(PREFIX2).autobil.bin
+	lt-trim $^ $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
-$(PREFIX2).autogen.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).dix
-	apertium-validate-dictionary $<
-	lt-comp rl $< $@
+$(PREFIX2).autogen.bin: $(AP_LIB1)/$(LANG1).autogen.bin
+	cp $< $@
 
-$(PREFIX2).autopgen.bin: $(AP_SRC1)/apertium-$(LANG1).post-$(LANG1).dix
-	apertium-validate-dictionary $<
-	lt-comp lr $< $@
+$(PREFIX2).autopgen.bin: $(AP_LIB1)/$(LANG1).autopgen.bin
+	cp $< $@
 
+# Transfer
 $(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
 	apertium-validate-transfer $(BASENAME).$(PREFIX1).t1x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t1x $@
@@ -76,19 +83,22 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 	apertium-validate-postchunk $(BASENAME).$(PREFIX2).t3x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t3x $@
 
+
+# CG
 $(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
 	cg-comp $< $@
 
 $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 	cg-comp $< $@
 
+# Lexical selection
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 	lrx-comp $(BASENAME).$(PREFIX1).lrx $@
 
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 	lrx-comp $(BASENAME).$(PREFIX2).lrx $@
 
-
+# Tagger
 $(PREFIX1).prob: $(AP_LIB1)/$(LANG1).prob
 	cp $< $@
 
@@ -96,48 +106,42 @@ $(PREFIX2).prob: $(AP_LIB2)/$(LANG2).prob
 	cp $< $@
 
 ###############################################################################
-## Translation modes
+## Distribution
 ###############################################################################
-
-# All modes are created by this one goal
-modes/$(PREFIX1).mode: modes.xml
-	apertium-validate-modes modes.xml
-	apertium-gen-modes modes.xml
-	cp *.mode modes/
-
 
 EXTRA_DIST=$(BASENAME).$(PREFIX1).dix \
            $(BASENAME).$(PREFIX1).lrx \
            $(BASENAME).$(PREFIX2).lrx \
 	   $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x \
-	   $(BASENAME).$(PREFIX1).t3x $(BASENAME).$(PREFIX2).t1x \
-	   $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x \
+	   $(BASENAME).$(PREFIX1).t3x \
 	   modes.xml
 
-apertium_mlt_spa_DATA=$(TARGETS_COMMON) modes.xml
+# $(BASENAME).$(PREFIX2).t1x $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x
 
-apertium_modesdir=$(prefix)/share/apertium/modes/
-apertium_mlt_spadir=$(prefix)/share/apertium/apertium-$(PREFIX1)/
+###############################################################################
+## Installation
+###############################################################################
+
+apertium_mlt_spadir=$(prefix)/share/apertium/$(BASENAME)/
+
+apertium_mlt_spa_DATA=$(TARGETS_COMMON) \
+	   $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x \
+	   $(BASENAME).$(PREFIX1).t3x 
+
+# $(BASENAME).$(PREFIX2).t1x $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x
+
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX1).mode
 
 
-install-data-local:
-	mv modes modes.bak
-	$(prefix)/bin/apertium-gen-modes modes.xml $(BASENAME)
-	rm -rf modes
-	mv modes.bak modes
-	test -d $(DESTDIR)$(apertium_modesdir) || mkdir $(DESTDIR)$(apertium_modesdir)
-	modes=`xmllint --xpath '//mode[@install="yes"]/@name' modes.xml | sed 's/ *name="\([^"]*\)"/\1.mode /g'`; \
-		$(INSTALL_DATA) $$modes $(DESTDIR)$(apertium_modesdir); \
-		rm $$modes
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(DESTDIR)$(apertium_mlt_spadir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t2x $(DESTDIR)$(apertium_mlt_spadir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(DESTDIR)$(apertium_mlt_spadir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t1x $(DESTDIR)$(apertium_mlt_spadir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX2).t2x $(DESTDIR)$(apertium_mlt_spadir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX3).t3x $(DESTDIR)$(apertium_mlt_spadir)
+install-data-local: install-modes
 
+###############################################################################
+## Cleanup
+###############################################################################
 
-CLEANFILES = -rf $(TARGETS_COMMON) modes
+CLEANFILES = $(TARGETS_COMMON)
+clean-local: 
+	-rm -rf .deps modes
+
