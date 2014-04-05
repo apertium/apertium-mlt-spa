@@ -1,10 +1,8 @@
-
-
-
 <dictionary>
   <alphabet/>
   <sdefs>
     <sdef n="acr" 	c="Acronym"/> 
+    <sdef n="neg"         c="Negative"/>
     <sdef n="predet" 	c="Pre-determiner"/> 
     <sdef n="detnt" 	c="Determiner neuter(?)"/> 
     <sdef n="loc" 	c="Location (not locative!)"/> 
@@ -43,7 +41,7 @@
     <sdef n="vbser" 	c="Verb 'to be'"/> 
     <sdef n="vbhaver" 	c="Verb 'to have'"/> 
     <sdef n="vblex" 	c="Verb"/> 
-    <sdef n="vbmod" 	c="Modal verb"/> 
+    <sdef n="vbmod" 	c="Modal verb"/>
     <sdef n="inf" 	c="Infinitive"/> 
     <sdef n="ger" 	c="Gerund"/> 
     <sdef n="pp" 	c="Past participle"/> 
@@ -90,7 +88,12 @@
     <sdef n="vbdo" 	c="The verb 'to do'"/> 
     <sdef n="comp" 	c="Comparative"/> 
     <sdef n="pres" 	c="Present tense (indicative)"/> 
-    <sdef n="vaux" 	c="Auxiliary verb"/> 
+ 
+    <sdef n="tv"          c="Transitive"/>
+    <sdef n="iv"          c="Intransitive"/>
+
+    <sdef n="vaux" 	c="Auxiliary verb"/>
+ 
     <sdef n="ND" 	c="Number to be determined"/> 
     <sdef n="GD" 	c="Gender to be determined"/> 
     <sdef n="mon" 	c="Currency / valuta"/> 
@@ -108,18 +111,18 @@
 
 
     <!-- SECTION: Nouns -->
-    <e><p><l>ġnien<s n="n"/><s n="m"/><s n="sg"></l><r>jardín<s n="n"/><s n="m"/><s n="sg"></r></p></e>
-    <e><p><l>temp<s n="n"/><s n="m"><s n="sg"></l><r>clima<s n="n"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>tifel<s n="n"/><s n="m"><s n="sg"></l><r>niño<s n="n"/><s n="m"/><s n="sg"></r></p></e>
-    <e><p><l>sena<s n="n"/><s n="f"><s n="sg"/></l><r>año<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
-    <e><p><l>oħt<s n="n"/><s n="m"><s n="sg"></l><r>hermano<s n="n"/><s n="m"/><s n="sg"></r></p></e>
-    <e><p><l>kelb<s n="n"/><s n="m"><s n="sg"></l><r>perro<s n="n"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>qattus<s n="n"/><s n="m"><s n="sg"></l><r>gato<s n="n"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>omm<s n="n"/><s n="f"><s n="sg"></l><r>madre<s n="n"/><s n="f"/><s n="sg"></r></p></e>
-    <e><p><l>siġra<s n="n"/><s n="f"><s n="sg"></l><r>árbol<s n="n"/><s n="m"/><s n="sg"></r></p></e>
-    <e><p><l>id<s n="n"/><s n="f"><s n="sg"></l><r>mano<s n="n"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>għajn<s n="n"/><s n="f"><s n="sg"></l><r>ojo<s n="n"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>dar<s n="n"/><s n="f"><s n="sg"></l><r>casa<s n="n"/><s n="f"/><s n="sg"></r></p></e>
+    <e><p><l>ġnien<s n="n"/><s n="m"/><s n="sg"/></l><r>jardín<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>temp<s n="n"/><s n="m"/><s n="sg"/></l><r>clima<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>tifel<s n="n"/><s n="m"/><s n="sg"/></l><r>niño<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>sena<s n="n"/><s n="f"/><s n="sg"/></l><r>año<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+    <e><p><l>oħt<s n="n"/><s n="m"/><s n="sg"/></l><r>hermano<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>kelb<s n="n"/><s n="m"/><s n="sg"/></l><r>perro<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>qattus<s n="n"/><s n="m"/><s n="sg"/></l><r>gato<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>omm<s n="n"/><s n="f"/><s n="sg"/></l><r>madre<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+    <e><p><l>siġra<s n="n"/><s n="f"/><s n="sg"/></l><r>árbol<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>id<s n="n"/><s n="f"/><s n="sg"/></l><r>mano<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>għajn<s n="n"/><s n="f"/><s n="sg"/></l><r>ojo<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>dar<s n="n"/><s n="f"/><s n="sg"/></l><r>casa<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
     <e><p><l>tieqa<s n="n"/><s n="f"/><s n="sg"/></l><r>ventana<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 	<e><p><l>logħoba<s n="n"/><s n="f"/><s n="sg"/></l><r>juego<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 	<e><p><l>tweġiba<s n="n"/><s n="f"/><s n="sg"/></l><r>respuesta<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
@@ -136,49 +139,49 @@
 
 
     <!-- SECTION: Proper nouns -->
-    <e><p><l>Ġakbu<s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></l><r>Jaime<s n="np"/><s n="ant"/><s n="m"><s n="sg"></r></p></e>
-    <e><p><l>Marija<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></l><r>María<s n="np"/><s n="ant"/><s n="f"><s n="sg"></r></p></e>
-    <e><p><l>Mary<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></l><r>María<s n="np"/><s n="ant"/><s n="f"><s n="sg"></r></p></e>
+    <e><p><l>Ġakbu<s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></l><r>Jaime<s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></r></p></e>
+    <e><p><l>Marija<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></l><r>María<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></r></p></e>
+    <e><p><l>Mary<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></l><r>María<s n="np"/><s n="ant"/><s n="f"/><s n="sg"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
     <e><re>[.\?;:!"…]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     
     <!-- SECTION: Verbs -->
-    <e><p><l>qagħdad<s n="vblex"/><s n="iv"><s n="pprs"><s n="mf"><s n="pl"></l><r>estar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>lagħab<s n="vblex"/><s n="tv"><s n="past"><s n="p3"><s n="m"><s n="sg"></l><r>jugar<s n="vblex"/><s n="inf"></r></p></e>
+    <e><p><l>qagħdad<s n="vblex"/><s n="iv"/><s n="pprs"/><s n="mf"/><s n="pl"/></l><r>estar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>lagħab<s n="vblex"/><s n="tv"/><s n="past"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>jugar<s n="vblex"/><s n="inf"/></r></p></e>
     <e><p><l>poġġa<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="f"/><s n="sg"/></l><r>sentar<s n="vblex"/><s n="inf"/></r></p></e>
-    <e><p><l>kien<s n="vbaux"/><s n="iv"><s n="past"><s n="p3"><s n="m"><s n="sg"></l><r>hacer<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>seta<s n="vblex"/><s n="tv"><s n="past"><s n= "p3"><s n="mf"><s n="pl"></l><r>poder<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ħabb<s n="vbaux"/><s n="iv"><s n="pres"><s n="p3"><s n="mf"><s n="pl"></l><r>encantar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>raqad<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="m"><s n="sg"></l><r>dormir<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ħares<s n="vblex"/><s n="iv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>mirar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ra<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>ver<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ġara<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="m"><s n="sg"></l><r>correr<s n="vblex"/><s n="inf"></r></p></e>
-	<e><p><l>nħeba<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="m"><s n="sg"></l><r>esconder<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>jaf<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>saber<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>għadd<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>contar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>għamel<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>hacer<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>spiċċa<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>terminar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>fittex<s n="vblex"/><s n="iv"><s n="past"><s n="p3"><s n="m"><s n="sg"></l><r>buscar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>mar<s n="vblex"/><s n="tv"><s n="past"><s n="p3"><s n="m"><s n="sg"></l><r>ir<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>staqsa<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>preguntar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>tkellem<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="m"><s n="sg"></l><r>hablar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>rċieva<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="m"><s n="sg"></l><r>obtener<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>daħak<s n="vblex"/><s n="iv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>reír<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ħaseb<s n="vblex"/><s n="iv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>pensar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>qal<s n="vblex"/><s n="tv"><s n="imp"><s n="p2"><s n="mf"><s n="sg"></l><r>decir<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>wieġeb<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>decir<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ried<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>querer<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>mexa<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>caminar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>għad<s n="vbaux"/><s n="pres"><s n="p3"><s n="f"><s n="sg"></l><r>aún<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ipprova<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>tratar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>sab<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>encontrar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>sama<s n="vblex"/><s n="tv"><s n="pres"><s n="p2"><s n="mf"><s n="sg"></l><r>escuchar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>ġie<s n="vblex"/><s n="tv"><s n="pprs"><s n="p2"><s n="m"><s n="sg"></l><r>vener<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>issemma<s n="vblex"/><s n="iv"><s n="pres"><s n="p2"><s n="m"><s n="sg"></l><r>mencionar<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>feraħ<s n="vblex"/><s n="iv"><s n="pres"><s n="p3"><s n="mf"><s n="pl"></l><r>estar<b/>feliz<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>kiel<s n="vblex"/><s n="tv"><s n="pres"><s n="p3"><s n="mf"><s n="pl"></l><r>estar<b/>feliz<s n="vblex"/><s n="inf"></r></p></e>
-    <e><p><l>xorob<s n="vblex"/><s n="tv"><s n="pres"><s n="p3"><s n="mf"><s n="pl"></l><r>tomar<s n="vblex"/><s n="inf"></r></p></e>
+    <e><p><l>kien<s n="vaux"/><s n="iv"/><s n="past"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>hacer<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>seta<s n="vblex"/><s n="tv"/><s n="past"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>poder<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ħabb<s n="vaux"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>encantar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>raqad<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>dormir<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ħares<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>mirar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ra<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>ver<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ġara<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>correr<s n="vblex"/><s n="inf"/></r></p></e>
+	<e><p><l>nħeba<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>esconder<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>jaf<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>saber<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>għadd<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>contar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>għamel<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>hacer<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>spiċċa<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>terminar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>fittex<s n="vblex"/><s n="iv"/><s n="past"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>buscar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>mar<s n="vblex"/><s n="tv"/><s n="past"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>ir<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>staqsa<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>preguntar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>tkellem<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>hablar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>rċieva<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="m"/><s n="sg"/></l><r>obtener<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>daħak<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>reír<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ħaseb<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>pensar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>qal<s n="vblex"/><s n="tv"/><s n="imp"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>decir<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>wieġeb<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>decir<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ried<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>querer<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>mexa<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>caminar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>għad<s n="vaux"/><s n="pres"/><s n="p3"/><s n="f"/><s n="sg"/></l><r>aún<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ipprova<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>tratar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>sab<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>encontrar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>sama<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p2"/><s n="mf"/><s n="sg"/></l><r>escuchar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>ġie<s n="vblex"/><s n="tv"/><s n="pprs"/><s n="p2"/><s n="m"/><s n="sg"/></l><r>vener<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>issemma<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p2"/><s n="m"/><s n="sg"/></l><r>mencionar<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>feraħ<s n="vblex"/><s n="iv"/><s n="pres"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>estar<b/>feliz<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>kiel<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>estar<b/>feliz<s n="vblex"/><s n="inf"/></r></p></e>
+    <e><p><l>xorob<s n="vblex"/><s n="tv"/><s n="pres"/><s n="p3"/><s n="mf"/><s n="pl"/></l><r>tomar<s n="vblex"/><s n="inf"/></r></p></e>
     
     
     <!-- SECTION: Adverbs -->
@@ -246,19 +249,19 @@
     
 
 	<!-- SECTION: Numbers -->
-    <e><p><l>sitt</l><r>seis</r></p><par n="three__num"/></e>
-    <e><p><l>ħames</l><r>cinco</r></p><par n="three__num"/></e>
-    <e><p><l>żewġt<s n="num"/><s n="mf"/><s n="sp"/></l><r>dos</r></p><par n="three__num"/></e>
-    <e><p><l>tnejn<s n="num"/><s n="mf"/><s n="sp"/></l><r>dos</r></p><par n="three__num"/></e>
+    <e><p><l>sitt<s n="num"/></l><r>seis<s n="num"/></r></p></e>
+    <e><p><l>ħames<s n="num"/></l><r>cinco<s n="num"/></r></p></e>
+    <e><p><l>żewġt<s n="num"/><s n="mf"/><s n="sp"/></l><r>dos<s n="num"/></r></p></e>
+    <e><p><l>tnejn<s n="num"/><s n="mf"/><s n="sp"/></l><r>dos<s n="num"/></r></p></e>
    
 
 	<!-- SECTION: Pronouns -->
 	<e><p><l>xejn<s n="prn"/></l><r>nada<s n="prn"/></r></p></e>
 	<e><p><l>xi<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>él<s n="prn"/><s n="m"/><s n="sg"/></r></p></e>
-	<e><p><l>lu<s n="prn"/><s n="p1"><s n="mf"><s n="sg"></l><r>me<s n="prn"/><s n="p1"><s n="mf"><s n="sg"></r></p></e>
-	<e><p><l>u<s n="prn"/><s n="p3"><s n="f"><s n="sg"></l><r>le<s n="prn"/><s n="p3"><s n="mf"><s n="sg"></r></p></e>
-	<e><p><l>xi<b/>ħaġa<s n="prn"/><s n="itg"><s n="mf"><s n="sp"></l><r>algo<s n="prn"/><s n="mf"><s n="sg"></r></p></e>
-	<e><p><l>ftit<s n="prn"/><s n="ind"><s n="mf"><s n="sp"></l><r>un<b/>poco<b/>de<s n="prn"/><s n="mf"><s n="sg"></r></p></e>
+	<e><p><l>lu<s n="prn"/><s n="p1"/><s n="mf"/><s n="sg"/></l><r>me<s n="prn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+	<e><p><l>u<s n="prn"/><s n="p3"/><s n="f"/><s n="sg"/></l><r>le<s n="prn"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+	<e><p><l>xi<b/>ħaġa<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></l><r>algo<s n="prn"/><s n="mf"/><s n="sg"/></r></p></e>
+	<e><p><l>ftit<s n="prn"/><s n="ind"/><s n="mf"/><s n="sp"/></l><r>un<b/>poco<b/>de<s n="prn"/><s n="mf"/><s n="sg"/></r></p></e>
 	
 	<e><p><l>le<s n="ij"/></l><r>no<s n="adv"/></r></p></e>
 	<e><p><l>x<s n="neg"/></l><r>no<s n="neg"/></r></p></e>
