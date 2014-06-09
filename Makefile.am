@@ -34,28 +34,28 @@ TARGETS_COMMON = \
 ## Transducers, disambiguation rules, transfer
 ###############################################################################
 
-$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.bin $(PREFIX1).autobil.bin
+$(PREFIX1).automorf.bin: $(AP_SRC1)/$(LANG1).automorf.bin $(PREFIX1).autobil.bin
 	lt-trim $^ $@
 
 $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $(BASENAME).$(PREFIX1).dix $@
 
-$(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
+$(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	cp $< $@
 
 
-$(PREFIX2).automorf.bin: $(AP_LIB2)/$(LANG2).automorf.bin $(PREFIX2).autobil.bin
+$(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.bin $(PREFIX2).autobil.bin
 	lt-trim $^ $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
-$(PREFIX2).autogen.bin: $(AP_LIB1)/$(LANG1).autogen.bin
+$(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp $< $@
 
-$(PREFIX2).autopgen.bin: $(AP_LIB1)/$(LANG1).autopgen.bin
+$(PREFIX2).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
 	cp $< $@
 
 # Transfer
@@ -99,10 +99,10 @@ $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 	lrx-comp $(BASENAME).$(PREFIX2).lrx $@
 
 # Tagger
-$(PREFIX1).prob: $(AP_LIB1)/$(LANG1).prob
+$(PREFIX1).prob: $(AP_SRC1)/$(LANG1).prob
 	cp $< $@
 
-$(PREFIX2).prob: $(AP_LIB2)/$(LANG2).prob
+$(PREFIX2).prob: $(AP_SRC2)/$(LANG2).prob
 	cp $< $@
 
 ###############################################################################
