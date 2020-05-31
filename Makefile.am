@@ -4,7 +4,6 @@
 
 SUBDIRS=$(AP_SUBDIRS)
 
-VERSION=0.1.0
 LANG1=mlt
 LANG2=spa
 PREFIX1=$(LANG1)-$(LANG2)
@@ -52,10 +51,10 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
-$(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
+$(PREFIX2).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
 	cp $< $@
 
-$(PREFIX2).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
+$(PREFIX2).autopgen.bin: $(AP_SRC2)/$(LANG2).autopgen.bin
 	cp $< $@
 
 # Transfer
@@ -144,4 +143,3 @@ install-data-local: install-modes
 CLEANFILES = $(TARGETS_COMMON)
 clean-local: 
 	-rm -rf .deps modes
-
