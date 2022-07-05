@@ -92,10 +92,12 @@ $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 
 # Lexical selection
 $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
-	lrx-comp $(BASENAME).$(PREFIX1).lrx $@
+	apertium-validate-lrx $<
+	lrx-comp $< $@
 
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
-	lrx-comp $(BASENAME).$(PREFIX2).lrx $@
+	apertium-validate-lrx $<
+	lrx-comp $< $@
 
 # Tagger
 $(PREFIX1).prob: $(AP_SRC1)/$(LANG1).prob
